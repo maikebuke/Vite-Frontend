@@ -4,27 +4,40 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @font-face {
+        font-family: 'Hubot Sans';
+        src:
+          url('Hubot-Sans.woff2') format('woff2 supports variations'),
+          url('Hubot-Sans.woff2') format('woff2-variations');
+        font-weight: 200 900;
+        font-stretch: 75% 125%;
+      }
+      #intro {
+        font-family: 'Hubot Sans';
+      }
+    </style>
     <title>Vite App</title>
   </head>
   <body>
-    <span style='font-size:100px;'>&#10024;</span>
-    <span id="my-name">111</span>
-    <div id="app"></div>
+    <div style='font-size:200px; text-align:center;'>&#129312;</div>
+    <div id="intro" style='text-align:center;'></div>
+    <!-- <div id="app"></div> -->
     <script type="module" src="/src/main.js"></script>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script>
-      var app = document.getElementById('my-name');
+      var app = document.getElementById('intro');
       var typewriter = new Typewriter(app, {
         loop: true,
         delay: 75,
       });
       typewriter
         .pauseFor(2500)
-        .typeString('A simple yet powerful native javascript')
+        .typeString('Lizhenghao is a developer')
         .pauseFor(300)
-        .deleteChars(10)
-        .typeString('<strong>JS</strong> plugin for a cool typewriter effect and ')
-        .typeString('<strong>only <span style="color: #27ae60;">5kb</span> Gzipped!</strong>')
+        .deleteChars(15)
+        .typeString('<br/><strong>developer</strong> <br/> ')
+        .typeString('<strong>from <span style="color: #27ae60;">ISCAS</span>, China.</strong>')
         .pauseFor(1000)
         .start();
     </script>
